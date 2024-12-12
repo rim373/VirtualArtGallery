@@ -1,0 +1,61 @@
+<div class="container">
+    <section class="event-section">
+        <h2 class="section-title">Our current event</h2>
+        <div class="current-event">
+            <div class="event-left">
+                <img src="assets/Our Events/Our Events/current event.jpg" alt="Strings in Harmony Concert" class="event-image">
+                <h2 class="event-name">"Strings in Harmony"</h2>
+                <p class="event-description">
+                    Join us for an enchanting evening of classical mastery at "Strings in Harmony," where the timeless voice of the 
+                    violin will transport you through a journey of musical excellence. Our center proudly presents this intimate 
+                    concert featuring carefully selected pieces that showcase the violin's extraordinary range and emotional depth.
+                </p>
+            </div>
+            <div class="event-right">
+                <button class="event-button" (click)="openModal()">Register to attend</button>
+                <button class="event-button" routerLink="/current-event" routerLinkActive="active">View more details</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal" *ngIf="showModal()">
+        <div class="modal-content">
+            <span class="close" (click)="closeModal()">&times;</span>
+            <h2>Register for the event</h2>
+            <form #eventForm="ngForm" (ngSubmit)="onSubmit(eventForm.value)">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" ngModel required>
+                <br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" ngModel required>
+                <br>
+                <button type="submit" [disabled]="!eventForm.valid">Submit</button>
+            </form>
+        </div>
+    </div>
+    <!-- Modal -->
+    <section class="event-section">
+        <h2 class="section-title">Our past events</h2>
+        <div *ngIf="eventList().length > 0; else noEvents">
+            <div *ngFor="let item of eventList(); let i = index" class="event-container">
+                <div class="event-card">
+                    <div class="event-image">
+                        <img [src]="item.Flyer" alt="Workshop">
+                    </div>
+                    <div class="event-content">
+                        <h2 class="event-title">{{ item.Organiser }}</h2>
+                        <h3 class="event-title">{{ item.Date }}</h3>
+                        <p class="event-description">{{ item.Content }}</p>
+                        <a href="#" class="read-more">Read more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <ng-template #noEvents>
+            <p>No past events available.</p>
+        </ng-template>
+        
+    </section>
+    
+</div>

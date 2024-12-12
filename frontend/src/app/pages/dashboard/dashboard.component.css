@@ -1,0 +1,28 @@
+.datatable-container {
+  padding: 20px;
+}
+
+/* Tableau avec bordures */
+.bordered-table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+}
+
+/* Style des cellules d'en-tête */
+.bordered-table mat-header-cell {
+  border: 1px solid #ccc;
+  background-color: #f5f5f5;
+  font-weight: bold;
+}
+
+/* Style des cellules de données */
+.bordered-table mat-cell {
+  border: 1px solid #ccc;
+}
+
+/* Alignement et espacement des cellules */
+mat-header-cell,
+mat-cell {
+  padding: 8px;
+  text-align: left;
+}

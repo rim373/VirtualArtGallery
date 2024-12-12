@@ -1,0 +1,487 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', serif;
+}
+
+body {
+    background-color: #fff;
+    color: #333;
+}
+
+
+
+
+
+.container1 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.gal-section {
+    margin-bottom: 4rem;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #640E10;
+    margin-bottom: 2rem;
+    font-style: italic;
+    font-family:  'Sacramento', cursive;
+    border-bottom: 2px solid #640E10;
+    padding-bottom: 0.5rem;
+    width: fit-content;
+}
+
+.current-gal {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+.gal-left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.gal-image {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.gal-name {
+    font-size: 2rem;
+    color: #8b0000;
+    font-style: italic;
+    margin-top: 10px;
+    font-family:  'Sacramento', cursive;
+}
+
+.gal-description {
+    color: #333;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+.gal-right {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: flex-start;
+    padding-top: 50px;
+    margin-left: 10px;
+    margin-top: 49px;
+}
+
+.gal-button {
+    background-color: #793f3f;
+    color: #EEEEE6;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    font-family:  'Sacramento', cursive;
+    width: fit-content;
+}
+
+
+.gal-button:hover {
+    background-color: #642f2f;
+}
+
+@media (max-width: 768px) {
+    .gal-content {
+        grid-template-columns: 1fr;
+    }
+
+    .gal-right {
+        padding-top: 0;
+        align-items: center;
+    }
+}
+
+/*.event-image {
+    width: 10%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+}*/
+
+/*.event-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #666;
+    max-width: 800px;
+}*/
+
+/*.button-group {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}*/
+
+/*.btn {
+    padding: 0.5rem 1.5rem;
+    background-color: #8b0000;
+    color: white;
+    border: none;
+    border-radius:20px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 0.9rem;
+}*/
+/*.current-event-imbou{
+    display: flex;
+    justify-content: space-between;
+}*/
+
+.past-gal {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+#gal-container {
+    position: relative;
+    
+    margin: 0 auto;
+}
+.gal-card {
+    background-color: #f0f0f0;
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    border-radius: 5px;
+} .gal-image {
+    flex: 1;
+}
+
+.gal-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gal-content {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.gal-title {
+    color: #800020;
+    font-size: 2rem;
+    margin-bottom: 15px;
+    font-family:  'Sacramento', cursive;
+}
+
+.gal-description {
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.read-more {
+    align-self: flex-start;
+    background-color: #640E10;
+    color: #EEEEE6;
+    padding: 8px 20px;
+    text-decoration: none;
+    border-radius: 3px;
+    font-family:  'Sacramento', cursive;
+    font-size: 1.5em;
+}
+
+.scroll-arrow {
+    position: absolute;
+    right: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/*.past-event-card {
+    display: flex;
+    gap: 2rem;
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.past-event-image {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.past-event-content {
+    flex: 1;
+}
+
+.past-event-title {
+    font-size: 1.2rem;
+    color: #8b0000;
+    margin-bottom: 0.5rem;
+}
+
+.past-event-description {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.4;
+}*/
+
+footer {
+    background-color: #8b0000;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .past-gal {
+        grid-template-columns: 1fr;
+    }
+
+    .past-gal-card {
+        flex-direction: column;
+    }
+
+    .past-gal-image {
+        width: 100%;
+        height: 200px;
+    }
+}
+footer {
+    background-color: #5e0505;
+    margin-left: -100px;
+    margin-right: -100px;
+    padding: 60px 0;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    
+}
+
+.footer-area {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    
+}
+
+.single-footer-widget {
+    width: 350px;
+    margin-bottom: 30px;
+}
+
+.footer_1 img {
+    margin-bottom: 20px;
+}
+
+.footer_1 p {
+    font-size: 14px;
+    color: #666;
+    line-height: 24px;
+    margin-bottom: 15px;
+    padding-top: 0%;
+}
+
+.social_icon a {
+    margin-right: 10px;
+    font-size: 18px;
+    color: #666;
+    transition: all 0.3s;
+}
+
+.social_icon a:hover {
+    color: #ff663b;
+}
+
+
+
+.footer_2 h4, .single-footer-widget h4 {
+    font-size: 20px;
+    color: #0c2e60;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.footer_2 p {
+    font-size: 14px;
+    color: #666;
+    line-height: 24px;
+    margin-bottom: 15px;
+    padding-top: 0%;
+    
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #666;
+}
+
+.input-group-append .btn {
+    background-color: #ff663b;
+    border: none;
+    padding: 10px 15px;
+    color: white;
+    border-radius: 4px;
+}
+
+.input-group-append .btn i {
+    font-size: 16px;
+}
+.input-group{
+    display: flex;
+}
+.contact_info p {
+    
+    color: #666;
+    line-height: 24px;
+    padding-top: 0%;
+    padding-bottom: 0%;
+}
+
+.contact_info span {
+    font-size: 20px;
+    color: #333;
+    
+}
+
+
+.copyright_part_text {
+    text-align: center;
+    padding: 0px 0px;
+    border-top: 1px solid #e6e6e6;
+    margin: 0px 0px;
+    height: 2px;
+
+}
+
+.copyright_part_text p {
+    font-size: 14px;
+    color: #666;
+    padding: 0% 0%;
+}
+
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Anaheim);
+
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+	box-sizing: border-box;
+}
+*:before,
+*:after{
+	box-sizing: border-box;
+}
+html,
+body{
+	min-height: 100%;
+}
+body{
+	background-image: radial-gradient(mintcream 0%, lightgray 100%);
+}
+h1{
+	display: table;
+	margin: 5% auto 0;
+	text-transform: uppercase;
+	font-family: 'Anaheim', sans-serif;
+	font-size: 4em;
+	font-weight: 400;
+	text-shadow: 0 1px white, 0 2px black;
+}
+.container{
+	margin: 4% auto;
+	width: 210px;
+	height: 140px;
+	position: relative;
+	perspective: 1000px;
+}
+#carousel{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	transform-style: preserve-3d;
+	animation: rotation 20s infinite linear;
+}
+#carousel:hover{
+	animation-play-state: paused;
+}
+#carousel figure{
+	display: block;
+	position: absolute;
+	width: 186px;
+	height: 116px;
+	left: 10px;
+	top: 10px;
+	background: black;
+	overflow: hidden;
+	border: solid 5px black;
+}
+#carousel figure:nth-child(1){transform: rotateY(0deg) translateZ(288px);}
+#carousel figure:nth-child(2) { transform: rotateY(40deg) translateZ(288px);}
+#carousel figure:nth-child(3) { transform: rotateY(80deg) translateZ(288px);}
+#carousel figure:nth-child(4) { transform: rotateY(120deg) translateZ(288px);}
+#carousel figure:nth-child(5) { transform: rotateY(160deg) translateZ(288px);}
+#carousel figure:nth-child(6) { transform: rotateY(200deg) translateZ(288px);}
+#carousel figure:nth-child(7) { transform: rotateY(240deg) translateZ(288px);}
+#carousel figure:nth-child(8) { transform: rotateY(280deg) translateZ(288px);}
+#carousel figure:nth-child(9) { transform: rotateY(320deg) translateZ(288px);}
+
+img{
+	-webkit-filter: grayscale(1);
+	cursor: pointer;
+	transition: all .5s ease;
+}
+img:hover{
+	-webkit-filter: grayscale(0);
+  transform: scale(1.2,1.2);
+}
+
+@keyframes rotation{
+	from{
+		transform: rotateY(0deg);
+	}
+	to{
+		transform: rotateY(360deg);
+	}
+}

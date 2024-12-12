@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { HomeComponent } from '../home/home.component';
-import { SellerAuthComponent } from '../seller-auth/seller-auth.component';
+import { HomeComponent } from '../pages/home/home.component';
+import { SellerAuthComponent } from '../pages/seller-auth/seller-auth.component';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 @Component({
   selector: 'app-header',

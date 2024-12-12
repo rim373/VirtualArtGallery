@@ -1,0 +1,41 @@
+<div class="parent">
+    <div class="wrapper">
+        <form action="">
+            <h1>Sign Up</h1>
+
+            <div class="input-box">
+                <input type="text" name="name" [(ngModel)]="sellerAuthObj.Name" placeholder="Enter Your User Name">
+                <i class='bx bxs-user'></i>
+            </div>
+            
+            
+            <div class="input-box">
+              <input type="email" name="Mail" [(ngModel)]="sellerAuthObj.Mail" placeholder="Enter your Email Adress">
+              <i class='bx bxs-user'></i>
+            </div>
+
+
+            <div class="input-box">
+                <input type="password" name="pwd" [(ngModel)]="sellerAuthObj.pwd" placeholder="Enter your Password">
+                <i class='bx bxs-lock-alt' ></i>
+            </div>
+
+            <div class="remember-forget">
+                <label>
+                    
+                </label>
+                
+            </div>
+            <!-- <div class="remember-forget">
+              <label>
+                  <input type="checkbox">I agree to the <a href="#">Privacy Policy</a> and <a href="#">Terms of Service </label>
+            </div> -->
+
+            <button class="btn" type="submit" (click)="onSellerAuth()" >Create Account</button>
+
+            <div class="register-link">
+                <p>Already have an account? <br> <a routerLink ="/login" routerLinkActive="active">Login</a></p>
+            </div>
+        </form>
+    </div>
+</div>

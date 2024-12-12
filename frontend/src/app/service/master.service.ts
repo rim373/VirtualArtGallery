@@ -1,15 +1,25 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { APIResponseModel } from '../model/event';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MasterService {
 
-  apiUrl: string='http://127.0.0.1:8000/docs'
+  apiUrl: string='http://localhost:8000/'
+
+
   constructor(private http:HttpClient) { }
-  getAllEvent(){
-    return this.http.get(this.apiUrl + "" )
+
+
+
+  getAllEvent():Observable<APIResponseModel>{
+    return this.http.get<APIResponseModel>(this.apiUrl + "event_request" )
     
   }
+
+
+  
 }

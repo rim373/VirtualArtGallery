@@ -1,0 +1,29 @@
+<div class="contact-container">
+    <h1 class="contact-title">Contact us</h1>
+    <p class="contact-subtitle">We respond by e-mail within 48 hours</p>
+    
+    <form>
+        <div class="form-group">
+            <label class="form-label">Event Organiser</label>
+            <input [(ngModel)]="contactObj.Organiser" type="text" class="form-input" name="Event Organiser" placeholder="Event Organiser">
+        </div>
+        <div class="form-group">
+            <label class="form-label">Event Discription</label>
+            <input [(ngModel)]="contactObj.Content" type="text" class="form-input" name="Event Discription" placeholder="Event Discription">
+        </div>
+        <div class="form-group">
+            <label class="form-label">Event Date</label>
+            <input [(ngModel)]="contactObj.Date" type="text" class="form-input" name="Event Date" placeholder="Event Date">
+        </div>
+        <div class="form-group">
+            <label class="form-label">Event Flyer</label>
+            <input [(ngModel)]="contactObj.Flyer" type="link" class="form-input" name="Event Flyer link" placeholder="Event Flyer link">
+        </div>
+
+        
+
+        
+
+        <button type="submit" class="submit-button" type="submit"  routerLink ="/dashboard" routerLinkActive="active" (click)="onContact()" >send</button>
+    </form>
+</div>
