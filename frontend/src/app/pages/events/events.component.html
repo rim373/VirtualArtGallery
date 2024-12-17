@@ -35,27 +35,48 @@
         </div>
     </div>
     <!-- Modal -->
+
+
     <section class="event-section">
-        <h2 class="section-title">Our past events</h2>
-        <div *ngIf="eventList().length > 0; else noEvents">
-            <div *ngFor="let item of eventList(); let i = index" class="event-container">
+    <h2 class="section-title">Our Past Events</h2>
+    <div *ngIf="eventList().length > 0; else noEvents" class="carousel">
+        <!-- Left Arrow -->
+        <button class="carousel-arrow left-arrow" (click)="prevSlide()">&#10094;</button>
+
+        <!-- Carousel Container for Event Cards -->
+        <div class="carousel-container">
+            <div *ngFor="let item of eventList(); let i = index" 
+                 class="event-container" 
+                 [class.active]="i === currentIndex">
                 <div class="event-card">
                     <div class="event-image">
-                        <img [src]="item.Flyer" alt="Workshop">
+                        <img [src]="item.Flyer" alt="Event Flyer">
                     </div>
                     <div class="event-content">
                         <h2 class="event-title">{{ item.Organiser }}</h2>
-                        <h3 class="event-title">{{ item.Date }}</h3>
+                        <h3 class="event-date">{{ item.Date }}</h3>
                         <p class="event-description">{{ item.Content }}</p>
-                        <a href="#" class="read-more">Read more</a>
+                        <a href="#" class="read-more" routerLink ="/current-event" routerLinkActive="active" >Read more</a>
                     </div>
                 </div>
             </div>
         </div>
-        <ng-template #noEvents>
-            <p>No past events available.</p>
-        </ng-template>
-        
-    </section>
+
+        <!-- Right Arrow -->
+        <button class="carousel-arrow right-arrow" (click)="nextSlide()">&#10095;</button>
+
+        <!-- Navigation Dots -->
+        <div class="carousel-dots">
+            <span *ngFor="let item of eventList(); let i = index" 
+                  [class.active]="i === currentIndex" 
+                  (click)="setCurrentIndex(i)"></span>
+        </div>
+    </div>
+
+    <ng-template #noEvents>
+        <p>No past events available.</p>
+    </ng-template>
+</section>
+
     
 </div>

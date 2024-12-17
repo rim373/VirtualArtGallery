@@ -6,6 +6,7 @@
     color: #640e10;
     margin:0;
     font-size: 40px;
+    margin-left: -500px;
 
  }
  .nav ul{
@@ -18,7 +19,7 @@
  .nav li{
     padding-left: 15px;
     padding-top: 15px;
-    font-family:  'Sacramento', cursive;
+    font-family:  popins, cursive;
     font-size: 1.5em; 
     
  }

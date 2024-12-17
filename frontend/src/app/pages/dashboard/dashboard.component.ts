@@ -1,13 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { MatTableModule } from '@angular/material/table';
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http'; 
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { FormsModule } from '@angular/forms'; 
+
+
+
+
 
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [CommonModule ,MatTableModule, RouterLink , RouterLinkActive  ],
+  imports: [CommonModule ,MatTableModule, RouterLink , RouterLinkActive,FormsModule,CommonModule  ],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.css'
 })
@@ -31,6 +36,22 @@ export class DashboardComponent {
       }
     );
   }
+
+
+  //modal
+    showModal = signal<boolean>(false); // État de la modale
+    openModal(): void {
+      this.showModal.set(true);
+    }
+  
+    closeModal(): void {
+      this.showModal.set(false);
+    }
+  
+    onSubmit(formData: any): void {
+      console.log('Form data:', formData);
+      this.closeModal(); 
+    }
 
 
 

@@ -1,0 +1,125 @@
+/* General reset for the section */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.event-section {
+    background-color: #E2CCB5;
+    padding: 60px 30px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    margin: 30px auto;
+    max-width: 1200px;
+}
+
+.section-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #446688; /* Updated Blue Green */
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Georgia', serif;
+    line-height: 1.2;
+}
+
+.event-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+}
+
+.event-card {
+    width: 320px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.15);
+}
+
+.event-image {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+}
+
+.event-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.event-card:hover .event-img {
+    opacity: 0.8;
+}
+
+.event-content {
+    padding: 25px;
+    font-family: 'Georgia', serif;
+}
+
+.event-name {
+    font-size: 1.8rem;
+    color: #446688; /* Updated Blue Green */
+    font-weight: bold;
+    margin-bottom: 12px;
+    text-transform: capitalize;
+}
+
+.event-date {
+    font-size: 1.2rem;
+    color: #888;
+    margin-bottom: 15px;
+}
+
+.event-description {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.event-button {
+    background-color: #446688; /* Updated Blue Green */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+.event-button:hover {
+    background-color: #3a5d6a; /* Slightly darker shade of Blue Green */
+}
+
+@media (max-width: 768px) {
+    .event-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .event-card {
+        width: 100%;
+        max-width: 400px;
+    }
+}

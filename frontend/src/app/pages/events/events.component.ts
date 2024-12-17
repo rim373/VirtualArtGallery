@@ -1,4 +1,4 @@
-import { Component, OnInit, inject, signal } from '@angular/core';
+import { Component, OnInit, inject, signal  } from '@angular/core';
 import { MasterService } from '../../service/master.service';
 import { APIResponseModel, EventList } from '../../model/event';
 import { FormsModule } from '@angular/forms'; 
@@ -26,6 +26,39 @@ export class EventsComponent implements OnInit {
   items: any[] = [];
   masterService = inject(MasterService);
 
+
+  currentIndex = 0; // Tracks the currently displayed event
+  autoScrollInterval: any; // Interval ID for auto-scrolling
+
+
+   // Navigate to the previous event
+   prevSlide(): void {
+    this.currentIndex = this.currentIndex === 0 ? this.eventList.length - 1 : this.currentIndex - 1;
+  }
+  // Navigate to the next event
+  nextSlide(): void {
+    this.currentIndex = this.currentIndex === this.eventList.length - 1 ? 0 : this.currentIndex + 1;
+  }
+   // Set the current index based on the clicked dot
+   setCurrentIndex(index: number): void {
+    this.currentIndex = index;
+  }
+  // Automatically scroll the carousel every 5 seconds
+  startAutoScroll() {
+    setInterval(() => {
+      this.nextSlide();  // Move to the next slide
+    }, 5000);  // Change the interval as needed (5000 ms = 5 seconds)
+  }
+
+
+  // Automatically scroll back to the first item after reaching the last item
+  scrollToFirstItemIfLast() {
+    if (this.currentIndex === this.eventList().length - 1) {
+      this.currentIndex = 0;  // Reset to first item
+    }
+  }
+
+
   loadAllEvent(): void {
     this.masterService.getAllEvent().subscribe(
       (res: any) => {
@@ -51,8 +84,13 @@ export class EventsComponent implements OnInit {
      // Appeler l'API pour récupérer les événements lors de l'initialisation du composant
      this.loadAllEvent();
 
+
+    
+    this.startAutoScroll(); // Start auto-scrolling
+
      
    }
+   
  
  
 
