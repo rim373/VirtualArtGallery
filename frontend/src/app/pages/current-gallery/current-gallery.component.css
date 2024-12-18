@@ -1,160 +1,171 @@
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3rem;
+    background: #3b3b3b;
+}
+
+a{
+    color: #333;
+    text-decoration: none;
+}
+
+.container{
+    max-width: 1100px;
+    margin: auto;
+    overflow: auto;
+    padding: 0 2rem;
+}
+.main-header{
+    height: 55vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+}
+.main-header .bg-image{
+    margin-top: -2rem;
+    position: absolute;
+    background: url(https://images.pexels.com/photos/20967/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.9; 
+}
+.main-header h1{
+    font-family: 'Barlow', sans-serif;
+    font-size: 5rem;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+}
+.main-header .border{
+    background-color: rgb(219, 186, 186);
+    color: rgb(109, 70, 26);
+    padding: 0px 8px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.main-header h1 span{
+    color: #d6ca19;
+}
+
+.main-header p{
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 2rem;
+    color: #fff;
+}
+img{
+    width: 100%;
+}
+
+.card{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 2rem;
+    background: #7c3232;
+    color: #fff;
+    margin-bottom: 2rem;
+    border-radius: 30px;
+}
+.card h3{
+    font-family: 'Josefin Sans', sans-serif;
+    margin-bottom: 5 rem;
+}
+.text{
+    font-family: 'Titillium Web', sans-serif;
+    /* margin-bottom: 2px; */
+}
+.card img{
+    height: 400px;
+}
+
+.card > div{
     padding: 2rem;
 }
 
-.event-section-1 {
-    margin-bottom: 4rem;
+.card:nth-child(even)img{
+    order: 2;
 }
-.event-section-2 {
-    margin-bottom: 4rem;
-    margin-top: -85px;
-}
-.split{
-    display: grid;
-    grid-template-columns: 2fr 3fr; 
-    gap: 100px;
-    
-}
-
-.section-title {
-    font-size: 3.5rem;
-    color: #640E10;
-    margin-bottom: 2.5rem;
-    font-style: italic;
-    font-family:  'Sacramento', cursive; 
-    border-bottom: 2px solid #640E10;
-    padding-bottom: 0.5rem;
-    width: fit-content;
-}
-
-.event-image {
-    width: 20%;
-    height: 80%;
-    border-radius: 5px;
-    flex: 1; 
-}
-
-.image{
-    display: flex; /* Active Flexbox */
-    justify-content: center; /* Centre horizontalement */
-    align-items: center;
- margin-top: -50px;
-}
-
-.partner-logo {
-    width: 20%;
-    height: 20%;
-    display: block; 
-    margin: 0 auto;
-    border-radius: 5px;
-    flex: 1;
-    margin-top: -100px;
-}
-
-.event-name {
-    font-size: 2rem;
-    color: #640E10;
-    font-style: italic;
-    margin-top: 10px;
-    font-family:  'Sacramento', cursive;
-    text-align: center;
-}
-.partner-name {
-    font-size: 2rem;
-    color: #640E10;
-    font-style: italic;
-    margin-top: 10px;
-    font-family:  'Sacramento', cursive;
-    text-align: center;
-}
-
-.event-description {
-    color: #395963;
-    line-height: 1.6;
-    font-size: 1.1rem;
-    text-align: center;
-}
-.past-event-description {
-    color: #640E10;
-    line-height: 1.6;
+.btnn{
+    font-family: 'Josefin Sans', sans-serif;
     font-size: 1rem;
+    display: inline-block;
+    background: #446688;
+    color: #fff;
+    padding: 0.8rem 1.8rem;
+    margin-top: 5rem;
+    margin-left: 9rem;
+    cursor: pointer;
+    border-radius: 5px;
 }
-b{color: #395963;}
+.btnn:hover{
+    background: #000;
+}
+footer{
+    font-family: 'Barlow', sans-serif;
+    text-align: center;
+     padding: 0.1rem 1rem;  
+     margin: auto; 
+    color: #333333;
+    background-color: #3197b6;
+    border-radius: 2px;
+     overflow-y: hidden; 
+    /* margin-top: 3rem; */
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-.event-content {
-    flex: 1;
-    padding: 20px;
+.contact-links{
+    color: #fff;
     display: flex;
-    flex-direction: column;
-}
-
-.event-title {
-    color: #800020;
-    font-size: 24px;
-    margin-bottom: 15px;
-    font-family:  'Sacramento', cursive;
-}
-
-.event-description {
-    color: #333;
-    line-height: 1.6;
-    margin-bottom: 20px;
-}
-
-.event-button {
-    background-color: #640E10;
-    color: #EEEEE6;
-    padding: 10px 25px;
-    border: none;
-    border-radius: 20px;
-    font-size: 1.5rem;
-    cursor: pointer;
-    width: fit-content;
-    font-family:  'Sacramento', cursive;
-    display: block; 
-    margin: 0 auto; 
+    justify-content: center;
+    width: 200px;
+    max-width: 980px;
+    /* padding: 1rem; */
+    /* flex-wrap: wrap; */
+    margin-left: 25.5rem; 
+    margin-top: 1rem;
     
 }
-.retour-button {
-    background-color: #640E10;
-    color: #EEEEE6;
-    padding: 10px 25px;
-    border: none;
-    border-radius: 20px;
-    font-size: 1.5rem;
-    cursor: pointer;
-    width: fit-content;
-    font-family:  'Sacramento', cursive;
-    float: right;
-    margin-top: -50px;
+.contact-details{
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease-out; 
+  }
+  .contact-details:hover{
+    transform: translateY(5px);
+  }
+  .btn{
+    display: inline-block;
+      padding-right: 1rem;
+      text-decoration: none;
+      color: #333333;
+}
+
+@media(max-width: 700px){
+    .card{
+        display: block;
+    }
+}
+@media(max-width: 560px){
+    .contact-links{
+        margin-left: 2.5rem;
+    }
+    .btnn{
+        margin-left: 1rem;
+    }
+    .card{
+        margin-top: 2.5rem;
+    }
     
 }
-.event-button:hover {
-    background-color: #642f2f;
-}
-.retour-button:hover {
-    background-color: #642f2f;
-}
-
-
-
-.chart-container {
-    width: 100%;
-    height: 400px;
-    margin-top: 20px;
-}
-

@@ -1,4 +1,6 @@
 <div class="container">
+
+<!----
     <section class="event-section">
         <h2 class="section-title">Our current event</h2>
         <div class="current-event">
@@ -17,6 +19,41 @@
             </div>
         </div>
     </section>
+-->
+<link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Istok+Web:400,400i,700,700i|Old+Standard+TT:400,400i,700&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,700,700i&display=swap" rel="stylesheet">
+
+<link href="//dl.dropbox.com/s/vpi3f9s7nhpe7v7/honeybee.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Manuale:400,400i,700,700i&display=swap" rel="stylesheet">
+
+
+<div id="crown">
+  <img src="https://i.pinimg.com/736x/60/71/e6/6071e646344b8f16f7575d88dcdfb589.jpg">
+</div>
+
+<div class="fill">
+
+    <div>
+        <h1>Current event</h1>
+        <div class="para">
+            <p><b>Luminescent Pathways: Illuminating the Unseen</b> In this immersive workshop, artist Wei Zhang explores the interplay of light and darkness, transforming the gallery's shadowy spaces into a dynamic canvas of luminous experiences...</p>
+            
+            </div>
+    </div>
+    <div class="flsa">
+        <div class="next">
+            <a routerLink ="/current-event" routerLinkActive="active">View More</a>
+        </div>
+        <div class="next">
+            <a (click)="openModal()">Register Virtualy</a>
+        </div>
+    </div>
+  
+
+</div>
+
 
     <!-- Modal -->
     <div class="modal" *ngIf="showModal()">

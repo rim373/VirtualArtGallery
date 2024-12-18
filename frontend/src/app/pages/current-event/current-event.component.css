@@ -58,7 +58,7 @@
     color: #640E10;
     font-style: italic;
     margin-top: 10px;
-    font-family:  'Sacramento', cursive;
+    font-family:  'Poppins', cursive;
     text-align: center;
 }
 .partner-name {
@@ -124,7 +124,7 @@ b{color: #395963;}
     font-size: 1.5rem;
     cursor: pointer;
     width: fit-content;
-    font-family:  'Sacramento', cursive;
+    font-family:  'Poppins', cursive;
     display: block; 
     margin: 0 auto; 
     
@@ -138,7 +138,7 @@ b{color: #395963;}
     font-size: 1.5rem;
     cursor: pointer;
     width: fit-content;
-    font-family:  'Sacramento', cursive;
+    font-family:  'Poppins', cursive;
     float: right;
     margin-top: -50px;
     

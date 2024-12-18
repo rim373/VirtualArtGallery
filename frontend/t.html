@@ -4,395 +4,158 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Modal</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
     <style>
-        body {
-  font: Lato, sans-serif;
+        body { cursor: crosshair; background-color: #222; background-image: url('https://cdn.discordapp.com/attachments/568487239022149652/625204567902126108/Untitled-4b.jpg'); background-size: cover; background-repeat: no-repeat; background-position: bottom right; background-attachment: fixed; font-family: 'manuale'; font-size: 10px; letter-spacing: 1px; overflow-x: hidden; }
+
+::-webkit-scrollbar {
+width: 5px; height: 5px; border: 2px solid #111; background: #333; }
+
+::-webkit-scrollbar-thumb { background-image: linear-gradient(#ffd200, #ffd200); border: 2px solid; height: auto; }
+ 
+::-webkit-scrollbar-corner {
+background-color: #ffd200; height: 4px; width: 4px; }
+
+::selection { color:#eee; background-color: #222; }
+ 
+::-moz-selection { color:#eee; background-color: #222; }
+
+a:link, a:visited, a:active {  text-decoration: none;  color: #847165; -webkit-transition: .7s; -moz-transition: .7s; -ms-transition: .7s; -o-transition: .7s;}
+a:hover {color: #fff; text-decoration: none; }
+
+a:hover { cursor: help; }
+
+div#qTip { font: 7.0px 'istok web'; color: #eee; text-align: center; letter-spacing: 2px; text-transform: uppercase; max-width: 350px; padding: 3px 5px 3px 6px; margin: -5px 0 0 20px; position: absolute; background: rgba(1,1,1,0.7); z-index: 9999999999999!important; display: none; font-weight: bold; border: 1px solid rgba(255,255,255,0.2)
 }
 
+#icy { top: -4px; left: -0px; width: calc(90% + 0px); height: 10px; padding: 15px 5%; background-color: rgba(255,255,255,0.85); position: fixed; float: left; z-index: 99999; box-shadow: 2px 0px 6px #222; color: #222; font-family: 'abril fatface'; font-size: 10px; text-transform: uppercase; border-bottom: 1px solid rgba(255,255,255,0.1) }
 
-/* navbar */
+#icy a { display: inline-block; color: #222; font-family: 'abril fatface'; text-transform: uppercase; letter-spacing: 2px; font-size: 8px; margin-left: 10px; margin-right: 10px; }
 
-.navbar-default {
-  background-color: black;
-  border: black;
-  padding: inherit;
-}
+#icy i { font-family: 'old standard tt'; color: #222; text-transform: none }
 
+#icy .th { font-size: 9px; }
 
-/* title */
+.mama { font-family: 'abril fatface'; text-transform: uppercase; font-size: 8px; letter-spacing: 2px; margin-right: 30px; color: #555; }
+.mama a { margin: 0px!important; }
 
-.navbar-default .navbar-brand {
-  font-size: 3.46667rem;
-  font-family: 'Vast Shadow', cursive;
-  text-transform: uppercase;
-  margin-left: 10px !important;
-  color: white;
-}
+#crown { width: 90%; height: 80%; top: 12%; left: 5%; position: absolute; backgroud-size: cover; overflow-y: hidden; border: 1px solid rgba(255,255,255,0.2); background-color: #000; }
 
-.navbar-default .navbar-brand:visited {
-  color: white;
-}
+#crown img { height: 100%; right: 0px; float: right; }
 
-.navbar-default .navbar-brand:hover,
-.navbar-default .navbar-brand:active {
-  color: #E7E700;
-}
+.fill { margin-left: -11px; border: 1px solid rgba(255,255,255,0.1); background-color:rgba(255,255,255,0.15); padding: 10px 20px 30px 20px; top: calc(50% - 120px); transform: translate(0%, 0%); width: 600px; position: absolute; height: 200px; }
 
+.fill h1 { width: 428px; font-family: 'abril fatface'; font-weight: normal; font-size: 50px; letter-spacing: 5px; margin-left: 15%; text-transform: uppercase; color: rgba(255,255,255,0.9); border-top: 1px solid rgba(255,255,255,0.2); )}
 
-/* link */
+.fill h1 b { border-bottom: 4px solid #ffd200; padding-bottom: 2px; font-weight: normal; }
 
-.navbar-default .navbar-nav > li > a {
-  color: white;
-  margin-right: 30px;
-  font-size: 15px;
-  font-family: 'Lato', sans-serif;
-}
+.subtitle { font-family: 'abril fatface'; font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: #eee; margin-left: 15%; margin-top: -38px; }
 
-.navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li > a:active {
-  color: #555 !important;
-  background-color: #E7E700 !important;
-}
+.subtitle b { color: #ffd200 }
 
-.navbar-default .navbar-nav > .active > a,
-.navbar-default .navbar-nav > .active > a:hover,
-.navbar-default .navbar-nav > .active > a:focus {
-  color: #555 !important;
-  background-color: #E7E700 !important;
-}
+.para { color: #ddd; font-family: 'manuale'; font-size: 10px; letter-spacing: 1px; margin-left: calc(15% + 3px); border-left: 1px solid rgba(255,255,255,0.4); padding-left: 10px; text-align: justify; width: 415px; margin-top: 10px; opacity: 0.9 }
 
+.para b { font-family: 'istok web'; text-transform: uppercase; letter-spacing: 1px; }
 
-/*carousel*/
+.next { background-color: #ffd200; color: #000; font-family: 'montserrat'; letter-spacing: 1px; text-align: left; margin-top: 40px; font-weight: bold; padding: 4px 10px; font-size: 9px; text-transform: uppercase; margin-left: calc(15% + 0px); width: 118px; }
 
-.carousel-inner {
-  background-color: black;
-}
+.next a { color: #000 }
 
-.carousel-inner img {
-  -webkit-filter: grayscale(90%);
-  filter: grayscale(90%);
-  /* make all photos black and white */
-  width: 90rem;
-  /* Set width */
-  margin: auto;
-  padding: 50px;
-}
+.main { width: calc(100% - 0px); left: 5%; top: calc(90% + 100px); height: 200px; border: 1px solid rgba(255,255,255,0.15); background-color: rgba(255,255,255,0.1); padding: 20px; float: left; position: absolute; margin-bottom: 100px }
 
-.carousel-caption {
-  color: #fff !important;
-  padding: 0px 0px 70px 0px;
-}
+.stripes { width: calc(15% + 550px); border-top: 1px solid #ffd200; height: 1px; margin-left: calc(-15% + 11px); margin-top: 150px; position: relative; }
 
-@media (max-width: 600px) {
-  .carousel-caption {
-    display: none;
-    /* Hide the carousel text when the screen is less than 600 pixels wide */
-  }
-}
+.no { font-family: 'old standard tt'; font-size: 14px; font-weight: bold; color: #eee; letter-spacing: 1px; padding: 8px 5px; position: absolute; border: 1px solid rgba(255,255,255,0.3); width: 20px; margin-top: -20px; text-align: center }
+
+.summer { width: 370px; margin-left: 70px; margin-top: -144px; font-family: 'manuale'; height: 100px; padding: 0px 10px; letter-spacing: 1px; text-align: justify; color: rgba(255,255,255,0.8); }
+
+.summer b { font-family: 'montserrat'; text-transform: uppercase; letter-spacing: 1px; font-weight: bold; color: #eee; }
+
+.summer i { font-style: normal; font-weight: bold; font-family: 'old standard tt'; background-color: rgba(255,210,0,0.2); color: #fff; font-weight: bold; padding: 2px 4px; }
+
+.summer u { color: #ffd200; }
+
+.striping { width: 50px; height: 1px; position: relative; background: rgba(255,255,255,0.4); margin-top: 16px; margin-left: 30px; }
+
+.listen { width: 400px; margin-left: 100px; margin-top: -12px; }
+
+.listen a { display: inline-block; margin-right: 8px; padding: 4px 6px; font-family: 'old standard tt'; font-size: 14px; color: #ffd200; font-weight: bold; text-align: left; text-transform: uppercase; border: 1px solid rgba(255,255,255,0.2) }
+
+.staff { font-family: 'montserrat'; text-transform: uppercase; font-size: 9px; font-weight: bold; margin-left: 390px; margin-top: -6px; letter-spacing: 1px; color: #eee; }
+
+.striper { margin-top: -175px; border-right: 1px solid rgba(255,255,255,0.2); height: 185px; margin-left: 500px; width: 1px; }
+
+.voice { margin-left: 560px; width: 380px; height: 110px; overflow: hidden; margin-top: -123px; border: 1px solid rgba(255,255,255,0.2) }
+
+.voicebox { width: 380px; height: 110px; border: 1px solid rgba(255,255,255,0.4); margin-left: 550px; margin-top: -175px; }
+
+.season { font-size: 12px; font-family: 'old standard tt'; font-style: italic; color: #eee; letter-spacing: 0px; text-transform: lowercase; margin-left: 900px; margin-top: -20px; }
+
+.season b { letter-spacing: 1px; }
 
 
-/*Portfolio*/
-
-.container {
-  margin-top: 30px;
-  margin-bottom: 70px;
-  text-align: center;
-}
-
-.container h2 {
-  font: Lato, sans-serif;
-}
-
-.container > p {
-  font: Lato, sans-serif;
-  padding: 0px 85px 35px 85px;
-}
-
-.thumbnail img {
-  width: 100%;
-  height: 100%;
-  margin-bottom: 10px;
-}
-
-
-/*about*/
-
-.bg-gray {
-  background-color: ghostwhite;
-}
-
-.logo {
-  font-size: 200px;
-}
-
-@media screen and (max-width: 768px) {
-  .col-sm-4 {
-    text-align: center;
-    margin: 25px 0px;
-  }
-}
-
-.container-fluid h2 {
-  margin: 70px 0px 30px 0px;
-  font: Lato, sans-serif;
-  text-align: center;
-}
-
-.container-fluid .row .col-sm-8 {
-  padding: 0px 25px 15px 40px;
-  font-stretch: expanded;
-  text-align: justify;
-}
-
-.container-fluid .row .col-sm-8 .btn {
-  margin: 10px 0px 70px 0px;
-}
-
-
-/*contact*/
-
-.container h2 {
-  margin: 70px 0px 30px 0px;
-  font: Lato, sans-serif;
-  text-align: center;
-}
-
-.container .col-sm-5 {
-  text-align: left;
-}
-
-
-/*footer*/
-
-footer .glyphicon {
-  font-size: 20px;
-  margin-bottom: 20px;
-  color: #f4511e;
-}
-
-.social-media ul {
-  margin: 20px 35px 30px 0px;
-}
-
-.social-media li {
-  list-style: none;
-  display: inline;
-  text-align: center;
-}
-
-.social-media img {
-  max-height: 20px;
-  max-width: 20px;
-  width: 20px;
-  height: 20px;
-  margin: 0px 10px 0px 15px;
-}
-
-footer {
-  padding: 20px;
-}
-
-footer .glyphicon {
-  color: black;
-}
     </style>
 </head>
-<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
-    
-        <nav class="navbar navbar-default navbar-fixed-top">
-          <div class="container-fluid">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                          <span class="icon-bar"></span>
-                          <span class="icon-bar"></span>
-                          <span class="icon-bar"></span>
-                      </button>
-              <a class="navbar-brand" href="#myPage">KELVS</a>
+<body >
+  
+<header class="main-header">
+        <div class="bg-image"></div>
+        <h1><span>Sazs<span class="border">Art</span></span> Gallery</h1>
+        <p> I never paint dreams or nightmares. I paint my own reality.</p>
+    </header>
+    <main class="container">
+        <section class="card">
+            <img src="https://images.pexels.com/photos/1629236/pexels-photo-1629236.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">
+            <div>
+                <h3>Blue and Red Galaxy Artwork</h3>
+                <p class="text">Never apologize for burning too brightly or collapsing into yourself every night. That is how galaxies are made.</p>
+                <a href="https://www.pexels.com/" target="_blank" class="btnn">Get this</a>
             </div>
-            <div class="collapse navbar-collapse" id="myNavbar">
-              <ul class="nav navbar-nav navbar-right">
-                <li><a href="#portfolio">PORTFOLIO</a></li>
-                <li><a href="#about">ABOUT</a></li>
-                <li><a href="#contact">CONTACT</a></li>
-              </ul>
+        </section>
+        <section class="card" data-aos="fade-up">
+            <img src="https://images.pexels.com/photos/929280/pexels-photo-929280.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">
+            <div>
+                <h3>Black Spiral Staircase</h3>
+                <p class="text">You will never feel alone, if you run down the stairs of loneliness; as every solitary step becomes your companion.</p>
+                <a href="https://www.pexels.com/" target="_blank" class="btnn">Get this</a>
             </div>
-          </div>
-        </nav>
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-          <!-- Indicators -->
-          <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-            <li data-target="#myCarousel" data-slide-to="3"></li>
-          </ol>
-      
-          <!-- Wrapper for slides -->
-          <div class="carousel-inner" role="listbox">
-            <div class="item active">
-              <img src="https://th.bing.com/th/id/OIP.YeSN1YouGpMhvdd_oyUeAwHaE0?w=277&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Lydia">
-              <div class="carousel-caption">
-                <h3>Lorem 1</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              </div>
+        </section>
+        <section class="card" data-aos="fade-right">
+            <img src="https://images.pexels.com/photos/573294/pexels-photo-573294.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">
+            <div>
+                <h3>Green Leaf</h3>
+                <p class="text">A tree would rather die than produce green leaves, whereas instead of dying the average person would rather be someone they are not.</p>
+                <a href="https://www.pexels.com/" target="_blank" class="btnn">Get this</a>
             </div>
-      
-            <div class="item">
-              <img src="https://th.bing.com/th/id/OIP.YeSN1YouGpMhvdd_oyUeAwHaE0?w=277&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Marquez">
-              <div class="carousel-caption">
-                <h3>Lorem 2</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              </div>
+        </section>
+        <section class="card" data-aos="fade-left">
+            <img src="https://images.pexels.com/photos/266526/pexels-photo-266526.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">
+            <div>
+                <h3>Orange Fire</h3>
+                <p class="text">There may be a great fire in our soul, yet no one ever comes to warm himself at it, and the passers-by see only a wisp of smoke.</p>
+                <a href="https://www.pexels.com/" target="_blank" class="btnn">Get this</a>
             </div>
-      
-            <div class="item">
-              <img src="https://cdn.colorlib.com/wp/wp-content/uploads/sites/2/studio9-dark-fullscreen-portfolio-gallery-template.jpg" alt="Studio 9">
-              <div class="carousel-caption">
-                <h3>Lorem 3</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-              </div>
+        </section>
+        <section class="card" data-aos="fade-down">
+            <img src="https://images.pexels.com/photos/1012982/pexels-photo-1012982.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">
+            <div>
+                <h3>Multicolored Abstract Painting</h3>
+                <p class="text">Color helps to express light—not the physical phenomenon, but the only light that really exists, that in the artist's brain.</p>
+                <a href="https://www.pexels.com/" target="_blank" class="btnn">Get this</a>
             </div>
-      
-            <div class="item">
-              <img src="https://th.bing.com/th/id/OIP.YeSN1YouGpMhvdd_oyUeAwHaE0?w=277&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Zap">
-              <div class="carousel-caption">
-                <h3>Lorem 4</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              </div>
-            </div>
-          </div>
-      
-          <!-- Left and right controls -->
-          <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
-        </div>
-      
-        <div id="portfolio" class="container text-center">
-          <h2>PORTFOLIO</h2>
-          <p>All these template images are properties of Colorlib. All these template images are properties of Colorlib. All these template images are properties of Colorlib. All these template images are properties of Colorlib. All these template images are properties
-            of Colorlib. All these template images are properties of Colorlib. </p>
-          <div class="row text-center">
-            <div class="col-sm-4">
-              <div class="thumbnail">
-                <img src="https://th.bing.com/th/id/OIP.YeSN1YouGpMhvdd_oyUeAwHaE0?w=277&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Exa">
-                <p><strong>Exa</strong></p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              </div>
-            </div>
-            <div class="col-sm-4">
-              <div class="thumbnail">
-                <img src="https://cdn.colorlib.com/wp/wp-content/uploads/sites/2/turin-fullscreen-html-website-template.jpg" alt="Turin">
-                <p><strong>Turin</strong></p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              </div>
-            </div>
-            <div class="col-sm-4">
-              <div class="thumbnail">
-                <img src="https://cdn.colorlib.com/wp/wp-content/uploads/sites/2/massive-vertical-menu-gallery-website-template.jpg" alt="Massive">
-                <p><strong>Massive</strong></p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              </div>
-            </div>
-            <div class="col-sm-4">
-              <div class="thumbnail">
-                <img src="https://cdn.colorlib.com/wp/wp-content/uploads/sites/2/conrad-minimal-gallery-html-website-template.jpg" alt="Condrad">
-                <p><strong>Condrad</strong></p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              </div>
-            </div>
-            <div class="col-sm-4">
-              <div class="thumbnail">
-                <img src="https://cdn.colorlib.com/wp/wp-content/uploads/sites/2/Yonkers-grid-style-html5-gallery-template.jpg" alt="Yonkers">
-                <p><strong>Yonkers</strong></p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              </div>
-            </div>
-            <div class="col-sm-4">
-              <div class="thumbnail">
-                <img src="https://cdn.colorlib.com/wp/wp-content/uploads/sites/2/avoc-masonry-style-portfolio-theme.jpg" alt="Avox">
-                <p><strong>Avox</strong></p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      
-        <div id="about" class="container-fluid bg-gray">
-          <h2>ABOUT PAGE</h2>
-          <div class="row">
-            <div class="col-sm-8">
-              <h4>Lorem ipsum..</h4>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with
-                desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-              <button class="btn btn-default btn-lg">Get in Touch</button>
-            </div>
-            <div class="col-sm-4">
-              <span class="glyphicon glyphicon-user logo"></span>
-            </div>
-          </div>
-        </div>
-      
-        <div id="contact" class="container">
-          <h2 class="text-center">CONTACT</h2>
-          <div class="row">
-            <div class="col-sm-5">
-              <p>Contact us and we'll get back to you within 24 hours.</p>
-              <p><span class="glyphicon glyphicon-map-marker"></span> Manila, PH</p>
-              <p><span class="glyphicon glyphicon-phone"></span> +63 1515151515</p>
-              <p><span class="glyphicon glyphicon-envelope"></span> iam@email.com</p>
-            </div>
-            <div class="col-sm-7">
-              <div class="row">
-                <div class="col-sm-6 form-group">
-                  <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
-                </div>
-                <div class="col-sm-6 form-group">
-                  <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
-                </div>
-              </div>
-              <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
-              <br>
-              <div class="row">
-                <div class="col-sm-12 form-group">
-                  <button class="btn btn-default pull-right" type="submit">Send</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      
-        <footer class="container-fluid text-center bg-gray">
-          <div class="social-media">
-            <ul>
-              <li>
-                <a href="https://www.facebook.com/kelvinabella" target="_blank"><img src="http://image.flaticon.com/icons/svg/33/33702.svg" alt="Facebook"></a>
-              </li>
-              <li>
-                <a href="https://github.com/kelvinabella" target="_blank"><img src="http://image.flaticon.com/icons/svg/25/25231.svg" alt="Github"></a>
-              </li>
-              <li>
-                <a href="https://codepen.io/kelvs/" target="_blank"><img src="http://image.flaticon.com/icons/svg/51/51767.svg" alt="CodePen"></a>
-              </li>
-              <li>
-                <a href="https://www.freecodecamp.com/kelvinabella" target="_blank"><img src="http://image.flaticon.com/icons/svg/24/24143.svg" alt="FreeCodeCamp">
-                </a>
-              </li>
-            </ul>
-          </div>
-          <p>Copyright © 2017 by Kelvs
-            <br> Made with Love by <a href="#">Kelvs</a></p>
-          <a href="#myPage" title="To Top">
-            <span class="glyphicon glyphicon-chevron-up"></span>
-          </a>
-        </footer>
-      
+        </section>
+        
+      </main>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init(
+        {
+            offset: 400,
+        duration: 600
+        }
+    );
+  </script>
 </body>
 
 </html>
