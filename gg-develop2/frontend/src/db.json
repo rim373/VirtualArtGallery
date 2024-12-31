@@ -1,0 +1,27 @@
+{
+  "seller": [
+    {
+      "name": "Rim Barnat",
+      "Email": "rim@gmail.com",
+      "id": 1
+    },
+    {
+      "id": "3776",
+      "name": "Rim0",
+      "Email": "rim@gmail.com",
+      "password": "hey"
+    },
+    {
+      "id": "bd31",
+      "name": "Rim1",
+      "Email": "rim1@gmail.com",
+      "password": "heyy"
+    },
+    {
+      "id": "772b",
+      "name": "Rim1",
+      "Email": "rim1@gmail.com",
+      "password": "heyy"
+    }
+  ]
+}

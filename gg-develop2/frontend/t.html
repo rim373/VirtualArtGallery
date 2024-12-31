@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Modal</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
+    <style>
+        body { cursor: crosshair; background-color: #222; background-image: url('https://cdn.discordapp.com/attachments/568487239022149652/625204567902126108/Untitled-4b.jpg'); background-size: cover; background-repeat: no-repeat; background-position: bottom right; background-attachment: fixed; font-family: 'manuale'; font-size: 10px; letter-spacing: 1px; overflow-x: hidden; }
+
+::-webkit-scrollbar {
+width: 5px; height: 5px; border: 2px solid #111; background: #333; }
+
+::-webkit-scrollbar-thumb { background-image: linear-gradient(#ffd200, #ffd200); border: 2px solid; height: auto; }
+ 
+::-webkit-scrollbar-corner {
+background-color: #ffd200; height: 4px; width: 4px; }
+
+::selection { color:#eee; background-color: #222; }
+ 
+::-moz-selection { color:#eee; background-color: #222; }
+
+a:link, a:visited, a:active {  text-decoration: none;  color: #847165; -webkit-transition: .7s; -moz-transition: .7s; -ms-transition: .7s; -o-transition: .7s;}
+a:hover {color: #fff; text-decoration: none; }
+
+a:hover { cursor: help; }
+
+div#qTip { font: 7.0px 'istok web'; color: #eee; text-align: center; letter-spacing: 2px; text-transform: uppercase; max-width: 350px; padding: 3px 5px 3px 6px; margin: -5px 0 0 20px; position: absolute; background: rgba(1,1,1,0.7); z-index: 9999999999999!important; display: none; font-weight: bold; border: 1px solid rgba(255,255,255,0.2)
+}
+
+#icy { top: -4px; left: -0px; width: calc(90% + 0px); height: 10px; padding: 15px 5%; background-color: rgba(255,255,255,0.85); position: fixed; float: left; z-index: 99999; box-shadow: 2px 0px 6px #222; color: #222; font-family: 'abril fatface'; font-size: 10px; text-transform: uppercase; border-bottom: 1px solid rgba(255,255,255,0.1) }
+
+#icy a { display: inline-block; color: #222; font-family: 'abril fatface'; text-transform: uppercase; letter-spacing: 2px; font-size: 8px; margin-left: 10px; margin-right: 10px; }
+
+#icy i { font-family: 'old standard tt'; color: #222; text-transform: none }
+
+#icy .th { font-size: 9px; }
+
+.mama { font-family: 'abril fatface'; text-transform: uppercase; font-size: 8px; letter-spacing: 2px; margin-right: 30px; color: #555; }
+.mama a { margin: 0px!important; }
+
+#crown { width: 90%; height: 80%; top: 12%; left: 5%; position: absolute; backgroud-size: cover; overflow-y: hidden; border: 1px solid rgba(255,255,255,0.2); background-color: #000; }
+
+#crown img { height: 100%; right: 0px; float: right; }
+
+.fill { margin-left: -11px; border: 1px solid rgba(255,255,255,0.1); background-color:rgba(255,255,255,0.15); padding: 10px 20px 30px 20px; top: calc(50% - 120px); transform: translate(0%, 0%); width: 600px; position: absolute; height: 200px; }
+
+.fill h1 { width: 428px; font-family: 'abril fatface'; font-weight: normal; font-size: 50px; letter-spacing: 5px; margin-left: 15%; text-transform: uppercase; color: rgba(255,255,255,0.9); border-top: 1px solid rgba(255,255,255,0.2); )}
+
+.fill h1 b { border-bottom: 4px solid #ffd200; padding-bottom: 2px; font-weight: normal; }
+
+.subtitle { font-family: 'abril fatface'; font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: #eee; margin-left: 15%; margin-top: -38px; }
+
+.subtitle b { color: #ffd200 }
+
+.para { color: #ddd; font-family: 'manuale'; font-size: 10px; letter-spacing: 1px; margin-left: calc(15% + 3px); border-left: 1px solid rgba(255,255,255,0.4); padding-left: 10px; text-align: justify; width: 415px; margin-top: 10px; opacity: 0.9 }
+
+.para b { font-family: 'istok web'; text-transform: uppercase; letter-spacing: 1px; }
+
+.next { background-color: #ffd200; color: #000; font-family: 'montserrat'; letter-spacing: 1px; text-align: left; margin-top: 40px; font-weight: bold; padding: 4px 10px; font-size: 9px; text-transform: uppercase; margin-left: calc(15% + 0px); width: 118px; }
+
+.next a { color: #000 }
+
+.main { width: calc(100% - 0px); left: 5%; top: calc(90% + 100px); height: 200px; border: 1px solid rgba(255,255,255,0.15); background-color: rgba(255,255,255,0.1); padding: 20px; float: left; position: absolute; margin-bottom: 100px }
+
+.stripes { width: calc(15% + 550px); border-top: 1px solid #ffd200; height: 1px; margin-left: calc(-15% + 11px); margin-top: 150px; position: relative; }
+
+.no { font-family: 'old standard tt'; font-size: 14px; font-weight: bold; color: #eee; letter-spacing: 1px; padding: 8px 5px; position: absolute; border: 1px solid rgba(255,255,255,0.3); width: 20px; margin-top: -20px; text-align: center }
+
+.summer { width: 370px; margin-left: 70px; margin-top: -144px; font-family: 'manuale'; height: 100px; padding: 0px 10px; letter-spacing: 1px; text-align: justify; color: rgba(255,255,255,0.8); }
+
+.summer b { font-family: 'montserrat'; text-transform: uppercase; letter-spacing: 1px; font-weight: bold; color: #eee; }
+
+.summer i { font-style: normal; font-weight: bold; font-family: 'old standard tt'; background-color: rgba(255,210,0,0.2); color: #fff; font-weight: bold; padding: 2px 4px; }
+
+.summer u { color: #ffd200; }
+
+.striping { width: 50px; height: 1px; position: relative; background: rgba(255,255,255,0.4); margin-top: 16px; margin-left: 30px; }
+
+.listen { width: 400px; margin-left: 100px; margin-top: -12px; }
+
+.listen a { display: inline-block; margin-right: 8px; padding: 4px 6px; font-family: 'old standard tt'; font-size: 14px; color: #ffd200; font-weight: bold; text-align: left; text-transform: uppercase; border: 1px solid rgba(255,255,255,0.2) }
+
+.staff { font-family: 'montserrat'; text-transform: uppercase; font-size: 9px; font-weight: bold; margin-left: 390px; margin-top: -6px; letter-spacing: 1px; color: #eee; }
+
+.striper { margin-top: -175px; border-right: 1px solid rgba(255,255,255,0.2); height: 185px; margin-left: 500px; width: 1px; }
+
+.voice { margin-left: 560px; width: 380px; height: 110px; overflow: hidden; margin-top: -123px; border: 1px solid rgba(255,255,255,0.2) }
+
+.voicebox { width: 380px; height: 110px; border: 1px solid rgba(255,255,255,0.4); margin-left: 550px; margin-top: -175px; }
+
+.season { font-size: 12px; font-family: 'old standard tt'; font-style: italic; color: #eee; letter-spacing: 0px; text-transform: lowercase; margin-left: 900px; margin-top: -20px; }
+
+.season b { letter-spacing: 1px; }
+
+
+    </style>
+</head>
+<body >
+  
+<header class="main-header">
+        <div class="bg-image"></div>
+        <h1><span>Sazs<span class="border">Art</span></span> Gallery</h1>
+        <p> I never paint dreams or nightmares. I paint my own reality.</p>
+    </header>
+    <main class="container">
+        <section class="card">
+            <img src="https://images.pexels.com/photos/1629236/pexels-photo-1629236.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">
+            <div>
+                <h3>Blue and Red Galaxy Artwork</h3>
+                <p class="text">Never apologize for burning too brightly or collapsing into yourself every night. That is how galaxies are made.</p>
+                <a href="https://www.pexels.com/" target="_blank" class="btnn">Get this</a>
+            </div>
+        </section>
+        <section class="card" data-aos="fade-up">
+            <img src="https://images.pexels.com/photos/929280/pexels-photo-929280.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">
+            <div>
+                <h3>Black Spiral Staircase</h3>
+                <p class="text">You will never feel alone, if you run down the stairs of loneliness; as every solitary step becomes your companion.</p>
+                <a href="https://www.pexels.com/" target="_blank" class="btnn">Get this</a>
+            </div>
+        </section>
+        <section class="card" data-aos="fade-right">
+            <img src="https://images.pexels.com/photos/573294/pexels-photo-573294.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">
+            <div>
+                <h3>Green Leaf</h3>
+                <p class="text">A tree would rather die than produce green leaves, whereas instead of dying the average person would rather be someone they are not.</p>
+                <a href="https://www.pexels.com/" target="_blank" class="btnn">Get this</a>
+            </div>
+        </section>
+        <section class="card" data-aos="fade-left">
+            <img src="https://images.pexels.com/photos/266526/pexels-photo-266526.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">
+            <div>
+                <h3>Orange Fire</h3>
+                <p class="text">There may be a great fire in our soul, yet no one ever comes to warm himself at it, and the passers-by see only a wisp of smoke.</p>
+                <a href="https://www.pexels.com/" target="_blank" class="btnn">Get this</a>
+            </div>
+        </section>
+        <section class="card" data-aos="fade-down">
+            <img src="https://images.pexels.com/photos/1012982/pexels-photo-1012982.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="">
+            <div>
+                <h3>Multicolored Abstract Painting</h3>
+                <p class="text">Color helps to express light—not the physical phenomenon, but the only light that really exists, that in the artist's brain.</p>
+                <a href="https://www.pexels.com/" target="_blank" class="btnn">Get this</a>
+            </div>
+        </section>
+        
+      </main>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init(
+        {
+            offset: 400,
+        duration: 600
+        }
+    );
+  </script>
+</body>
+
+</html>

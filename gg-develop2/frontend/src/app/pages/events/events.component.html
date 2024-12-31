@@ -1,0 +1,100 @@
+<div class="container">
+
+
+<link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Istok+Web:400,400i,700,700i|Old+Standard+TT:400,400i,700&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,700,700i&display=swap" rel="stylesheet">
+
+<link href="//dl.dropbox.com/s/vpi3f9s7nhpe7v7/honeybee.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Manuale:400,400i,700,700i&display=swap" rel="stylesheet">
+
+
+<div id="crown">
+  <img src="https://i.pinimg.com/736x/60/71/e6/6071e646344b8f16f7575d88dcdfb589.jpg">
+</div>
+
+<div class="fill">
+
+    <div>
+        <h1>Current event</h1>
+        <div class="para">
+            <p><b>Luminescent Pathways: Illuminating the Unseen</b> In this immersive workshop, artist Wei Zhang explores the interplay of light and darkness, transforming the gallery's shadowy spaces into a dynamic canvas of luminous experiences...</p>
+            
+            </div>
+    </div>
+    <div class="flsa">
+        <div class="next">
+            <a routerLink ="/current-event" routerLinkActive="active">View More</a>
+        </div>
+        <div class="next">
+            <a (click)="openModal()">Register Virtualy</a>
+        </div>
+    </div>
+  
+
+</div>
+
+
+    <!-- Modal -->
+    <div class="modal" *ngIf="showModal()">
+        <div class="modal-content">
+            <span class="close" (click)="closeModal()">&times;</span>
+            <h2>Register for the event</h2>
+            <form class="formm" #eventForm="ngForm" (ngSubmit)="onSubmit(eventForm.value)">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" ngModel required>
+                <br>
+                <label for="name">Email:</label>
+                <input type="text" id="name" name="name" ngModel required>
+                <br>
+                <button type="submit" [disabled]="!eventForm.valid">Submit</button>
+            </form>
+        </div>
+    </div>
+    <!-- Modal -->
+
+
+    <section class="event-section">
+    <h2 class="section-title">Our Past Events</h2>
+    <div *ngIf="eventList().length > 0; else noEvents" class="carousel">
+        <!-- Left Arrow -->
+        <button class="carousel-arrow left-arrow" (click)="prevSlide()">&#10094;</button>
+
+        <!-- Carousel Container for Event Cards -->
+        <div class="carousel-container">
+            <div *ngFor="let item of eventList(); let i = index" 
+                 class="event-container" 
+                 [class.active]="i === currentIndex">
+                <div class="event-card">
+                    <div class="event-image">
+                        <img [src]="item.Flyer" alt="Event Flyer">
+                    </div>
+                    <div class="event-content">
+                        <h2 class="event-title">{{ item.Organiser }}</h2>
+                        <h3 class="event-date">{{ item.Date }}</h3>
+                        <p class="event-description">{{ item.Content }}</p>
+                        <a href="#" class="read-more" routerLink ="/current-event" routerLinkActive="active" >Read more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Arrow -->
+        <button class="carousel-arrow right-arrow" (click)="nextSlide()">&#10095;</button>
+
+        <!-- Navigation Dots -->
+        <div class="carousel-dots">
+            <span *ngFor="let item of eventList(); let i = index" 
+                  [class.active]="i === currentIndex" 
+                  (click)="setCurrentIndex(i)"></span>
+        </div>
+    </div>
+
+    <ng-template #noEvents>
+        <p>No past events available.</p>
+    </ng-template>
+</section>
+
+    
+</div>

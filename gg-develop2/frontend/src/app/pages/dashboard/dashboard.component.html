@@ -1,0 +1,106 @@
+<div class="split">
+  <div class="parametre">
+  <button class="event-button" routerLink ="/Contact" routerLinkActive="active" > Add Event</button>
+
+  
+  </div>
+
+  <div class="datatable-container">
+    <h1>Event Data Table</h1>
+    <mat-table [dataSource]="dataSource" class="mat-elevation-z8 bordered-table">
+  
+      <!-- Colonne Organiser -->
+      <ng-container matColumnDef="id">
+        <mat-header-cell *matHeaderCellDef> id </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{ element.id }} </mat-cell> 
+      </ng-container>
+  
+      <!-- Colonne Organiser -->
+      <ng-container matColumnDef="organiser">
+        <mat-header-cell *matHeaderCellDef> Organiser </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{ element.Organiser }} </mat-cell> 
+      </ng-container>
+  
+      <!-- Colonne Content -->
+      <ng-container matColumnDef="content">
+        <mat-header-cell *matHeaderCellDef> Content </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{ element.Content }} </mat-cell> 
+      </ng-container>
+  
+      <!-- Colonne Date -->
+      <ng-container matColumnDef="date">
+        <mat-header-cell *matHeaderCellDef> Date </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{ element.Date }} </mat-cell> 
+      </ng-container>
+  
+      <!-- Colonne Flyer -->
+      <ng-container matColumnDef="flyer">
+        <mat-header-cell *matHeaderCellDef> Flyer </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{ element.Flyer }} </mat-cell> 
+      </ng-container>
+      <!-- Colonne Flyer -->
+      <ng-container matColumnDef="Update">
+        <mat-header-cell *matHeaderCellDef> Edit </mat-header-cell>
+        <mat-cell *matCellDef="let element"> <button class="event-button"  (click)="openModal1(element.id)" > Update Event</button> </mat-cell> 
+      </ng-container>
+      <!-- Colonne Flyer -->
+      <ng-container matColumnDef="Delate">
+        <mat-header-cell *matHeaderCellDef> Edit </mat-header-cell> 
+        <mat-cell *matCellDef="let element"> <button class="event-button"  (click)="deleteEvent( element.id)"  > Delate Event </button></mat-cell> 
+      </ng-container>
+  
+      
+  
+      <!-- Ligne d'en-tête -->
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <!-- Lignes des données -->
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+  </div>
+</div>
+
+
+
+
+<!-- Modal -->
+<div class="modal" *ngIf="showModal()">
+  <div class="modal-content">
+    <span class="close" (click)="closeModal()">&times;</span>
+    <h2>Delate Event </h2>
+    <form #eventForm="ngForm" (ngSubmit)="onSubmit(eventForm.value)">
+      <label for="name">Id Event</label>
+      <input type="int" id="name" name="name" ngModel required >
+      <br>
+      <button type="submit" [disabled]="!eventForm.valid">Submit</button>
+    </form>
+  </div>
+</div>
+<!-- Modal -->
+
+
+
+
+
+<!-- Modal -->
+<div class="modal" *ngIf="showModal1()">
+  <div class="modal-content">
+    <span class="close" (click)="closeModal1()">&times;</span>
+    <h2>Update Event </h2>
+    <form #eventForm="ngForm" (ngSubmit)="onSubmit1(eventForm.value)">
+      <label for="name">Event Organiser</label>
+      <input type="text" id="name" name="name" ngModel required >
+      <br>
+      <label for="name">Event dicription</label>
+      <input type="text" id="name" name="name" ngModel required >
+      <br>
+      <label for="name">Event date</label>
+      <input type="text" id="name" name="name" ngModel required >
+      <br>
+      <label for="name">Event flyer</label>
+      <input type="text" id="name" name="name" ngModel required >
+      <br>
+      <button type="submit" [disabled]="!eventForm.valid">Submit</button>
+    </form>
+  </div>
+</div>
+<!-- Modal -->

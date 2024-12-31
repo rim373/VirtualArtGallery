@@ -1,0 +1,178 @@
+.datatable-container {
+  padding: 20px;
+}
+
+/* Tableau avec bordures */
+.bordered-table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+}
+
+/* Style des cellules d'en-tête */
+.bordered-table mat-header-cell {
+  border: 1px solid #ccc;
+  background-color: #f5f5f5;
+  font-weight: bold;
+}
+
+/* Style des cellules de données */
+.bordered-table mat-cell {
+  border: 1px solid #ccc;
+}
+
+/* Alignement et espacement des cellules */
+mat-header-cell,
+mat-cell {
+  padding: 8px;
+  text-align: left;
+}
+
+
+
+
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Fond plus sombre */
+  z-index: 1000;
+  backdrop-filter: blur(5px); /* Effet de flou subtil */
+}
+
+.modal-content {
+  background-color: #EEEEE6; /* Beige clair pour douceur */
+  padding: 25px;
+  border-radius: 12px; /* Bords arrondis élégants */
+  width: 400px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Ombre subtile */
+  border: 2px solid #395963; /* Bordure exotique */
+  animation: fadeIn 0.5s ease-in-out; /* Animation d'apparition */
+}
+
+.close {
+  font-size: 24px;
+  font-weight: bold;
+  color: #395963; /* Rouge sombre artistique */
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close:hover {
+  color: #395963; /* Rouge vibrant au survol */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Arial', sans-serif;
+}
+
+form label {
+  margin-top: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #395963; /* Bleu-gris élégant */
+}
+
+form input {
+  margin-top: 8px;
+  margin-bottom: 20px;
+  padding: 12px;
+  font-size: 15px;
+  border: 1px solid #395963; /* Rouge exotique */
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+form input:focus {
+  border-color: #395963; /* Rouge sombre au focus */
+  outline: none;
+  box-shadow: 0 0 8px #395963;
+}
+
+form button {
+  background-color: #395963; /* Rouge profond */
+  color: #EEEEE6;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #395963; /* Rouge vibrant au survol */
+  transform: translateY(-2px); /* Effet de survol léger */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+.split {
+  display: grid;
+  grid-template-columns: 1fr 9fr; 
+  gap: 10px; 
+  position: relative; /* Position relative for better control */
+}
+
+/* .parametre Section with fixed position */
+.parametre {
+  margin-top: 300px;
+  display: flex;             /* Use Flexbox for layout */
+  flex-direction: column;    /* Arrange buttons vertically */
+  position: fixed;           /* Fix the position relative to the viewport */
+  top: 20px;                 /* Add space from the top of the page */
+  left: 20px;                /* Add space from the left side of the page */
+  width: 220px;              /* Fixed width for the button container */
+  background-color: #fff;    /* White background for clarity */
+  padding: 20px;             /* Padding inside the box */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow for styling */
+  z-index: 100;              /* Make sure it stays above other content */
+  border-radius: 8px;        /* Rounded corners for elegance */
+  height: auto;              /* Let the height adjust based on content */
+  box-sizing: border-box;    /* Include padding and border in width/height */
+}
+
+/* Add margin to .datatable-container to prevent overlap with fixed .parametre */
+.datatable-container {
+  margin-left: 150px;        /* Leave space for the fixed .parametre section */
+  width: 100%;
+}
+
+
+.event-button {
+  padding: 12px 35px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  background-color: #395963; /* Dark, classy blue */
+  color: #ECF0F1; /* Light grey text */
+  border: 2px solid transparent;
+  border-radius: 40px; /* Soft, rounded corners */
+  background-image: linear-gradient(45deg, #2C3E50, #34495E); /* Subtle gradient */
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Elegant shadow */
+  font-family: 'Helvetica', sans-serif;
+  
+}

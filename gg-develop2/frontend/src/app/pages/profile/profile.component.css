@@ -1,0 +1,109 @@
+
+.profile-container {
+    
+    margin: 0 auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    
+}
+
+.profile-header {
+    background: #640E10;
+    color: #EEEEE6;
+    padding: 20px;
+    text-align: center;
+}
+
+.profile-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.profile-section {
+    padding: 25px;
+    border-bottom: 1px solid #eee;
+}
+
+.section-title {
+    font-size: 18px;
+    color: #395963;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #eee;
+}
+
+.user-details {
+    display: grid;
+    gap: 15px;
+}
+
+.detail-group {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    align-items: center;
+    gap: 15px;
+}
+
+.detail-label {
+    font-weight: bold;
+    color: #395963;
+}
+
+.detail-value {
+    color: #395963;
+}
+
+.events-list {
+    display: grid;
+    gap: 15px;
+}
+
+.event-card {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    display: grid;
+    gap: 8px;
+}
+
+.event-title {
+    font-weight: bold;
+    color: #640E10;
+}
+
+.event-date {
+    color: #395963;
+    font-size: 14px;
+}
+
+.edit-button {
+    display: inline-block;
+    padding: 8px 20px;
+    background: #640E10;
+    color: #EEEEE6;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 14px;
+    margin-top: 20px;
+    
+}
+
+.edit-button:hover {
+    background: #640E10;
+}
+
+@media (max-width: 600px) {
+    .detail-group {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+
+    .detail-label {
+        color: #395963;
+        font-size: 14px;
+    }
+}

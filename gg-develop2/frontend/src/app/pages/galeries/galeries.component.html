@@ -1,0 +1,120 @@
+
+    <section class="intro">
+      <div class="intro-content">
+        <h1 class="title">Top Masterpieces</h1>
+        <p class="description">
+          The Top Masterpieces represent the pinnacle of artistic creativity, showcasing exceptional skill, innovation, and emotional depth. These three works stand out not only for their visual appeal but also for the stories they convey and the impact they leave on their audience. Each piece is a testament to the artist’s unique vision, blending technique and imagination to create something truly timeless. Together, they form a harmonious collection that celebrates the very essence of art.
+        </p>
+        <a  (click)="openModal()" class="btn">Join the Art Gallery</a>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal" *ngIf="showModal()">
+        <div class="modal-content">
+          <span class="close" (click)="closeModal()">&times;</span>
+          <h2>Register for the event</h2>
+          <form #eventForm="ngForm" (ngSubmit)="onSubmit(eventForm.value)">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" ngModel required>
+            <br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" ngModel required>
+            <br>
+            <button type="submit" [disabled]="!eventForm.valid">Submit</button>
+          </form>
+        </div>
+      </div>
+  <!-- Modal -->
+
+      <div class="card-container">
+        <div class="container">
+            <div id="carousel">
+                <figure><img class="imagecarousel" src="https://i.pinimg.com/736x/9e/71/78/9e7178a92e69913b62a0ee7a5f4e782e.jpg" alt=""></figure>
+                <figure><img class="imagecarousel" src="https://i.pinimg.com/736x/58/35/cd/5835cdddcc669c44b50e1e94646dfd5a.jpg" alt=""></figure>
+                <figure><img class="imagecarousel" src="https://i.pinimg.com/736x/e0/bd/db/e0bddb757587af8a74bbc65923162f88.jpg" alt=""></figure>
+                <figure><img class="imagecarousel" src="https://i.pinimg.com/736x/de/7b/8e/de7b8ea2745385b0d749e21ec7a8c5a1.jpg" alt=""></figure>
+                <figure><img class="imagecarousel" src="https://i.pinimg.com/736x/21/52/18/215218f98b242a960bd209fa108cada7.jpg" alt=""></figure>
+                <figure><img class="imagecarousel" src="https://i.pinimg.com/736x/0c/43/a9/0c43a9331dea0e86460cb5eb9241051e.jpg" alt=""></figure>
+                <figure><img class="imagecarousel" src="https://i.pinimg.com/736x/30/e9/da/30e9da2b7210ee73bad6d283608fdc7e.jpg" alt=""></figure>
+                <figure><img class="imagecarousel" src="https://i.pinimg.com/736x/dd/79/eb/dd79ebbc1c270f6c0ea9e92e6a49cfa6.jpg" alt=""></figure>
+                <figure><img class="imagecarousel" src="https://i.pinimg.com/736x/3d/39/44/3d39449b65d7c91c236d6bc8a6966dae.jpg" alt=""></figure>
+            </div>
+        </div>
+        
+      </div>
+    </section>
+
+    <section class="featured" id="featured">
+      <div class="gradient-line"></div>
+      <h1 class="featured-title">Our Loyal Artists</h1>
+      <div class="grid-area">
+        <div class="item art-one">
+          <img src="https://th.bing.com/th/id/OIP.vZnjn4m1FPGeDt3WdnkhvwHaFJ?rs=1&pid=ImgDetMain" alt="A Good Boy" />
+        </div>
+
+        <div class="item art-two">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRC3kmb-HAUzx18TAEaUIM-Muh9_BcJoUcYxg&s" alt="City Life" />
+        </div>
+
+        <div class="item art-three">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Michelangelo_Daniele_da_Volterra_%28dettaglio%29.jpg/260px-Michelangelo_Daniele_da_Volterra_%28dettaglio%29.jpg"
+            alt="An Ode to Mushrooms" />
+        </div>
+
+        <div class="item art-four">
+          <img
+            src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/e910c96c-eaed-4291-937d-b38d7cd0f0db"
+            alt="A Woman in Complexity" />
+        </div>
+
+        <div class="item art-five">
+          <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/8daeb10c-87c4-4b37-baa1-43559718ed05" alt="Steampunk" />
+        </div>
+
+        <div class="item art-six">
+          <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/7ce32896-2c31-4e46-b6f7-7dc76916aafb" alt="Dragon in Silks" />
+        </div>
+
+        <div class="item art-seven">
+          <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/14efe3d5-940b-47d7-b9d3-c9b882ff905f" alt="Cut and Paste Face" />
+        </div>
+
+        <div class="item art-eight">
+          <img
+            src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/8daeb10c-87c4-4b37-baa1-43559718ed05"
+            alt="Dolphins in the Sea" />
+        </div>
+
+        <div class="item art-nine">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRC3kmb-HAUzx18TAEaUIM-Muh9_BcJoUcYxg&s" alt="The Raven's Song" />
+        </div>
+
+        <div class="item art-ten">
+          <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/bc8cdd3a-784e-43ff-9363-661ee9becab2" alt="Haunted House" />
+        </div>
+
+        <div class="item art-eleven">
+          <img
+            src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/ef40ae8d-3ece-4d33-8974-9e16ade79784"
+            alt="The World of Butterflies" />
+        </div>
+
+        <div class="item art-twelve">
+          <img src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/7ce32896-2c31-4e46-b6f7-7dc76916aafb" alt="Lost in Thought" />
+        </div>
+      </div>
+
+      <div class="lightbox">
+        <div class="slide prev">
+          <i class="fa-solid fa-angle-left"></i>
+        </div>
+        <div class="img-container">
+          <p>title</p>
+          <img src="sample.jpg" alt="" />
+        </div>
+        <div class="slide next">
+          <i class="fa-solid fa-angle-right"></i>
+        </div>
+      </div>
+    </section>

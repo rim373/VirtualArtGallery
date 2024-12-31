@@ -1,0 +1,63 @@
+.nav {
+   display: flex;
+   justify-content: space-between; /* Space out the logo and navigation links */
+   align-items: center; /* Vertically align items */
+   padding: 20px 0; /* Add padding for spacing */
+}
+
+.nav h1 {
+   color: #640e10;
+   margin: 0;
+   font-size: 50px; /* Made the logo a bit bigger */
+   margin-left: 20px; /* Add space on the left side */
+}
+
+.nav ul {
+   display: flex;
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+   justify-content: center; /* Center the navigation items */
+   flex-grow: 1; /* Allow the navigation links to take up available space */
+}
+
+.nav li {
+   padding: 0 20px; /* Adjust padding for spacing between items */
+   font-family: 'Poppins', cursive;
+   font-size: 1.2em; /* Made the nav items smaller */
+   transition: font-weight 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.nav li a {
+   text-decoration: none;
+   color: #640e10;
+}
+
+.nav li a:hover {
+   font-weight: bold; /* Make text bold on hover */
+}
+
+.nav .nav-search {
+   margin-top: 5px;
+   display: flex;
+   justify-content: center; /* Center the search bar */
+   margin-left: 5%;
+   margin-right: 5%;
+}
+
+.nav .nav-search input {
+   flex: 1;
+   color: #640e10;
+   border: 1px solid #640e10;
+   height: 35px;
+   border-right: 0;
+   padding: 0 10px; /* Padding inside the input field */
+}
+
+.nav .nav-search button {
+   color: #640e10;
+   border: 1px solid #640e10;
+   height: 39px;
+   border-left: 0;
+   padding: 0 15px; /* Padding inside the button */
+}

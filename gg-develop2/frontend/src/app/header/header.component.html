@@ -1,0 +1,19 @@
+<nav class="nav">
+    <div class="container-fluid">
+       
+        <img src="assets/logo.png" alt="Logo" style="width:40px;" class="rounded-pill">
+        
+      </div>
+    
+    <ul>
+        <li><a routerLink ="/Home" routerLinkActive="active">Home</a></li>
+        <li><a routerLink ="/Events" routerLinkActive="active">Events</a></li>
+        <li><a routerLink ="/Galeries" routerLinkActive="active">Galleries</a></li>
+        <li><a routerLink ="/Our-Partners" routerLinkActive="active">Our Partners</a></li>
+        <li><a routerLink ="/seller-auth-component" routerLinkActive="active">Account</a></li>
+        <li *ngIf="!authService.isAdmin" ><a routerLink ="/profile" routerLinkActive="active">Profile</a></li>
+        <li *ngIf="authService.isAdmin" ><a routerLink ="/dashboard" routerLinkActive="active">Dashboard</a></li>
+        <!--  -->
+        
+    </ul>
+</nav>

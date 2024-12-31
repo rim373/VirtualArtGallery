@@ -1,0 +1,152 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.event-section-1 {
+    margin-bottom: 4rem;
+}
+.event-section-2 {
+    margin-bottom: 4rem;
+    margin-top: -85px;
+}
+.split{
+    display: grid;
+    grid-template-columns: 2fr 3fr; 
+    gap: 100px;
+    
+}
+
+.section-title {
+    font-size: 3.5rem;
+    color: #640E10;
+    margin-bottom: 2.5rem;
+    font-style: italic;
+    font-family:  'Sacramento', cursive; 
+    border-bottom: 2px solid #640E10;
+    padding-bottom: 0.5rem;
+    width: fit-content;
+}
+
+.event-image {
+    width: 20%;
+    height: 80%;
+    border-radius: 5px;
+    flex: 1; 
+}
+
+.image{
+    display: flex; /* Active Flexbox */
+    justify-content: center; /* Centre horizontalement */
+    align-items: center;
+ margin-top: -50px;
+}
+
+.partner-logo {
+    width: 20%;
+    height: 20%;
+    display: block; 
+    margin: 0 auto;
+    border-radius: 5px;
+    flex: 1;
+    margin-top: -100px;
+}
+
+.event-name {
+    font-size: 2rem;
+    color: #640E10;
+    font-style: italic;
+    margin-top: 10px;
+    font-family:  'Sacramento', cursive;
+    text-align: center;
+}
+.partner-name {
+    font-size: 2rem;
+    color: #640E10;
+    font-style: italic;
+    margin-top: 10px;
+    font-family:  'Sacramento', cursive;
+    text-align: center;
+}
+
+.event-description {
+    color: #395963;
+    line-height: 1.6;
+    font-size: 1.1rem;
+    text-align: center;
+}
+.past-event-description {
+    color: #640E10;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+b{color: #395963;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.event-content {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.event-title {
+    color: #800020;
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-family:  'Sacramento', cursive;
+}
+
+.event-description {
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.event-button {
+    background-color: #640E10;
+    color: #EEEEE6;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    width: fit-content;
+    font-family:  'Sacramento', cursive;
+    display: block; 
+    margin: 0 auto; 
+    
+}
+.retour-button {
+    background-color: #640E10;
+    color: #EEEEE6;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    width: fit-content;
+    font-family:  'Sacramento', cursive;
+    float: right;
+    margin-top: -50px;
+    
+}
+.event-button:hover {
+    background-color: #642f2f;
+}
+.retour-button:hover {
+    background-color: #642f2f;
+}
+
