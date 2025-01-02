@@ -32,27 +32,27 @@ Giggle & Gallery is a platform designed for cultural centers to:
    ng serve
    
 ### Key Features
-Explore Events: View past and current cultural events.
-View Galleries: Discover art galleries from the past and present.
-Event Participation: Register to attend galleries and events.
-Request Event Organization: Submit requests to host events.
-Partner with Us: Collaborate with the cultural center.
+- Explore Events: View past and current cultural events.
+- View Galleries: Discover art galleries from the past and present.
+- Event Participation: Register to attend galleries and events.
+- Request Event Organization: Submit requests to host events.
+- Partner with Us: Collaborate with the cultural center.
 #### Admin Features:
-Add, update, or delete events and galleries.
-Admin access is controlled via the IsAdmin Boolean variable.
+- Add, update, or delete events and galleries.
+- Admin access is controlled via the IsAdmin Boolean variable.
 
 ### Architecture: 
 The project focuses on:
 
-Community Connection: Bringing people together through art and culture.
-Inspiration: Creating transformative spaces and experiences.
-Collaboration: Providing a canvas for partnerships and creativity.
+- Community Connection: Bringing people together through art and culture.
+- Inspiration: Creating transformative spaces and experiences.
+- Collaboration: Providing a canvas for partnerships and creativity.
 
 ### Database
 Giggle & Gallery uses PostgreSQL to manage:
 
-User Data: Profiles, roles (e.g., admin).
-Event Data: Details about past, current, and upcoming events.
-Gallery Data: Information about art galleries.
-Partnership Data: Collaboration details with clubs and associations.
+- User Data: Profiles, roles (e.g., admin).
+- Event Data: Details about past, current, and upcoming events.
+- Gallery Data: Information about art galleries.
+- Partnership Data: Collaboration details with clubs and associations.
 
